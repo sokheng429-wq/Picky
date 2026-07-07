@@ -1,0 +1,33 @@
+/* Navbar Links */
+.custom-link {
+  color: white !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 15px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.custom-link:hover {
+  color: #fff0f5 !important;
+  transform: translateY(-2px);
+}
+
+/* Underline Animation */
+.custom-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.custom-link:hover::after,
+.custom-link.active::after {
+  width: 70%;
+}

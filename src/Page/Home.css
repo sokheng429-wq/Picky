@@ -248,3 +248,41 @@
     font-size:70px;
 
 }
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 4rem 1rem;
+    }
+
+    .search-box {
+        flex-direction: column;
+        border-radius: 24px;
+        padding: 0.75rem;
+    }
+
+    .search-box input {
+        margin-bottom: 0.75rem;
+    }
+
+    .search-box button {
+        width: 100%;
+        padding: 0.95rem;
+    }
+
+    .category-section,
+    .products {
+        padding: 3.5rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-card,
+    .product-card {
+        width: 100%;
+    }
+
+    .product-card {
+        padding: 24px;
+    }
+}

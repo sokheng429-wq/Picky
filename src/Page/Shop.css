@@ -289,12 +289,33 @@
 
 @media(max-width:768px){
 
+    .shop-page {
+        padding: 60px 0;
+    }
 
-.shop-title h1{
+    .shop-title h1 {
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
+    }
 
-    font-size:32px;
+    .shop-title p {
+        font-size: 1rem;
+    }
 
+    .image-box {
+        height: 240px;
+    }
+
+    .perfume-info button {
+        width: 100%;
+    }
 }
 
+@media(max-width:480px){
+    .perfume-info {
+        padding: 20px;
+    }
 
+    .perfume-info h4 {
+        font-size: 22px;
+    }
 }

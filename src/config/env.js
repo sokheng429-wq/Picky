@@ -5,11 +5,11 @@
 // =====================================================================
 
 export const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "https://pinky-backend.onrender.com/api,https://pinky-backend.onrender.com,https://pinky-backend.onrender.com/api/products";
+import.meta.env.VITE_API_BASE_URL || "https://pinky-backend.onrender.com/api";
 
 // True once the person has actually pointed the app at a backend
 // (either via .env or the default above). Kept as its own flag in case
 // we want to change the "no backend configured" behaviour later.
-export const IS_BACKEND_CONFIGURED = true;
+export const IS_BACKEND_CONFIGURED = !!API_BASE_URL;
 
 export const IS_DEV = import.meta.env.DEV;

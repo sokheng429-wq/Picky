@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
-import "./AddProduct.css";
+import "./Addproduct.css";
 import {
   getAllProducts,
   getProductById,

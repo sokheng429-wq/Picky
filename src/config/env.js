@@ -5,7 +5,7 @@
 // =====================================================================
 
 export const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:8082/api";
+  import.meta.env.VITE_API_BASE_URL || "https://pinky-backend.onrender.com/api";
 
 // True once the person has actually pointed the app at a backend
 // (either via .env or the default above). Kept as its own flag in case

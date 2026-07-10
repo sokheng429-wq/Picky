@@ -348,3 +348,105 @@
     letter-spacing:1px;
     text-transform:uppercase;
 }
+
+/* Product Grid */
+.shop-products{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:30px;
+    padding:0 40px;
+}
+
+
+/* Tablet */
+@media(max-width:992px){
+
+    .shop-products{
+        grid-template-columns:repeat(3,1fr);
+        gap:20px;
+        padding:0 25px;
+    }
+
+}
+
+
+/* Phone */
+@media(max-width:768px){
+
+    .shop-products{
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+        padding:0 15px;
+    }
+
+
+    .image-box{
+        height:220px;
+    }
+
+
+    .perfume-info{
+        padding:15px;
+    }
+
+
+    .perfume-info h3{
+        font-size:16px;
+    }
+
+
+    .perfume-info h4{
+        font-size:18px;
+    }
+
+
+    .stars{
+        font-size:14px;
+    }
+
+
+    .perfume-info p{
+        font-size:13px;
+    }
+
+
+    .btn-group{
+        flex-direction:column;
+        gap:8px;
+    }
+
+
+    .cart-btn,
+    .detail-btn{
+        width:100%;
+        padding:10px;
+        font-size:13px;
+    }
+
+}
+
+
+/* Small phone */
+@media(max-width:400px){
+
+    .shop-products{
+        gap:10px;
+        padding:0 10px;
+    }
+
+
+    .image-box{
+        height:180px;
+    }
+
+
+    .perfume-info h3{
+        font-size:14px;
+    }
+
+
+    .perfume-info h4{
+        font-size:16px;
+    }
+
+}

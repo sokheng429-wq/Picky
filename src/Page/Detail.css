@@ -1,34 +1,37 @@
 .detail-page{
     min-height:100vh;
     background:#fff5fa;
-    padding:80px 20px;
+    padding:clamp(40px, 6vw, 80px) clamp(15px, 4vw, 30px);
 }
 
 .detail-container{
     max-width:1100px;
     margin:auto;
     display:flex;
-    gap:50px;
+    gap:clamp(20px, 4vw, 50px);
     align-items:center;
     background:white;
-    padding:40px;
+    padding:clamp(20px, 4vw, 40px);
     border-radius:30px;
     box-shadow:0 15px 40px rgba(255,20,147,.15);
 }
 
 .detail-image{
     flex:1;
-    position:relative;
+    min-width:0;
 }
 
 .detail-image img{
     width:100%;
+    height:auto;
     border-radius:25px;
     object-fit:cover;
+    display:block;
 }
 
 .detail-info{
     flex:1;
+    min-width:0;
 }
 
 .detail-info .brand-name{
@@ -37,29 +40,33 @@
     text-transform:uppercase;
     letter-spacing:1px;
     margin-bottom:4px;
+    font-size:clamp(12px, 2vw, 16px);
 }
 
 .detail-info h1{
     color:#ff1493;
-    font-size:42px;
+    font-size:clamp(28px, 5vw, 42px);
     margin-bottom:15px;
+    line-height:1.2;
 }
 
 .detail-stars{
     color:#ffc107;
-    font-size:22px;
+    font-size:clamp(18px, 3vw, 22px);
     margin-bottom:15px;
 }
 
 .detail-info h2{
     color:#333;
     margin-bottom:20px;
+    font-size:clamp(20px, 3vw, 30px);
 }
 
 .detail-info p{
     color:#777;
     line-height:1.8;
     margin-bottom:20px;
+    font-size:clamp(14px, 2vw, 16px);
 }
 
 .detail-info h4{
@@ -75,6 +82,7 @@
 .detail-info li{
     margin-bottom:8px;
     color:#555;
+    font-size:clamp(14px, 2vw, 16px);
 }
 
 .detail-info button{
@@ -90,6 +98,7 @@
     font-weight:bold;
     cursor:pointer;
     transition:.3s;
+    width:auto;
 }
 
 .detail-info button:hover{
@@ -104,13 +113,58 @@
     font-weight:bold;
 }
 
-@media(max-width:768px){
+/* Tablet */
+@media (max-width: 992px){
+    .detail-container{
+        gap:30px;
+        padding:30px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px){
     .detail-container{
         flex-direction:column;
+        text-align:center;
         padding:25px;
     }
 
-    .detail-info h1{
-        font-size:32px;
+    .detail-image,
+    .detail-info{
+        width:100%;
+    }
+
+    .detail-info ul{
+        text-align:left;
+    }
+
+    .detail-info button{
+        width:100%;
+        margin-bottom:15px;
+    }
+
+    .back-btn{
+        display:block;
+        margin:0;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px){
+    .detail-page{
+        padding:30px 12px;
+    }
+
+    .detail-container{
+        padding:18px;
+        border-radius:20px;
+    }
+
+    .detail-image img{
+        border-radius:15px;
+    }
+
+    .detail-info button{
+        padding:12px 20px;
     }
 }

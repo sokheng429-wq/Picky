@@ -1,0 +1,417 @@
+/* =========================
+   MAIN NAVBAR
+========================= */
+
+.luxury-navbar {
+
+    background: linear-gradient(
+        135deg,
+        #ffb6d9,
+        #ff69b4,
+        #ff1493
+    );
+
+    animation: navbarDrop .8s ease;
+
+}
+
+
+@keyframes navbarDrop {
+
+    from {
+        transform: translateY(-80px);
+        opacity:0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity:1;
+    }
+
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-brand {
+
+    color:white !important;
+
+    font-size:32px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+
+    transition:.4s ease;
+
+}
+
+
+.navbar-brand:hover {
+
+    transform:scale(1.1) rotate(-3deg);
+
+}
+
+
+.navbar .d-flex {
+
+    gap:12px;
+
+    flex-wrap:nowrap;
+
+}
+
+
+/* =========================
+   MENU LINKS
+========================= */
+
+.custom-link {
+
+    color:white !important;
+
+    font-weight:600;
+
+    text-transform:uppercase;
+
+    letter-spacing:1.5px;
+
+    padding:10px 22px !important;
+
+    border-radius:50px;
+
+    position:relative;
+
+    transition:.35s ease;
+
+}
+
+
+.custom-link:hover {
+
+    transform:translateY(-4px);
+
+}
+
+
+.custom-link::after {
+
+    content:"";
+
+    position:absolute;
+
+    bottom:5px;
+
+    left:50%;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:20px;
+
+    background:white;
+
+    transform:translateX(-50%);
+
+    transition:.4s ease;
+
+}
+
+
+.custom-link:hover::after {
+
+    width:60%;
+
+}
+
+
+
+/* ACTIVE LINK */
+
+.custom-link.active {
+
+    background:white;
+
+    color:#ff1493 !important;
+
+    box-shadow:
+    0 8px 25px rgba(255,255,255,.45);
+
+    animation:selected .45s ease;
+
+}
+
+
+@keyframes selected {
+
+    0% {
+        transform:scale(.8);
+    }
+
+    100% {
+        transform:scale(1);
+    }
+
+}
+
+
+
+/* =========================
+   LOGIN & SIGNUP BUTTONS
+========================= */
+
+.login-btn,
+.signup-btn {
+
+    display:inline-flex !important;
+
+    align-items:center !important;
+
+    justify-content:center !important;
+
+    height:38px;
+
+    min-height:38px;
+
+    padding:0 18px;
+
+    margin:0 !important;
+
+    line-height:38px;
+
+    vertical-align:middle;
+
+}
+
+.user-greeting {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 38px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.user-greeting:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+
+/* remove different border size issue */
+
+.login-btn,
+.signup-btn {
+
+    border-width:2px;
+
+    border-style:solid;
+
+    box-sizing:border-box;
+
+}
+
+
+
+/* =========================
+   SHOPPING CART
+========================= */
+
+.cart-icon {
+
+    position:relative;
+
+    color:white;
+
+    font-size:25px;
+
+    text-decoration:none;
+
+    transition:.4s ease;
+
+}
+
+
+.cart-icon:hover {
+
+    transform:
+    translateY(-5px)
+    rotate(-10deg);
+
+}
+
+
+
+.cart-number {
+
+    position:absolute;
+
+    top:-12px;
+
+    right:-14px;
+
+    width:21px;
+
+    height:21px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:white;
+
+    color:#ff1493;
+
+    border-radius:50%;
+
+    font-size:12px;
+
+    font-weight:800;
+
+    animation:pulseCart 1.5s infinite;
+
+}
+
+
+
+@keyframes pulseCart {
+
+    0% {
+        transform:scale(1);
+    }
+
+    50% {
+        transform:scale(1.2);
+    }
+
+    100% {
+        transform:scale(1);
+    }
+
+}
+
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.navbar-toggler {
+
+    border:none;
+
+    border-radius:50%;
+
+    background:white;
+
+    padding:8px;
+
+}
+
+
+.navbar-toggler:hover {
+
+    transform:rotate(90deg);
+
+    transition:.4s;
+
+}
+
+
+
+@media(max-width:991px){
+
+    .navbar-nav {
+        margin-top:20px;
+        width:100%;
+    }
+
+    .custom-link {
+        text-align:center;
+        margin:5px;
+    }
+
+    .navbar .d-flex {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:12px;
+        flex-wrap:wrap;
+        width:100%;
+        margin-top:12px;
+    }
+
+    .navbar-brand {
+        font-size:28px;
+    }
+
+    .login-btn,
+    .signup-btn {
+        min-width:110px;
+    }
+}
+
+@media(max-width:576px){
+    .navbar-brand {
+        font-size:24px;
+    }
+
+    .navbar .container {
+        padding-inline:0.9rem;
+    }
+
+    .navbar .d-flex {
+        flex-direction:column;
+        gap:8px;
+    }
+
+    .login-btn,
+    .signup-btn {
+        width:100%;
+        max-width:180px;
+    }
+}
+
+.favorite-icon {
+  position: relative;
+  font-size: 1.4rem;
+  color: #f3eeef;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.favorite-icon:hover {
+  transform: scale(1.1);
+  color: #f9ebee;
+}
+
+.favorite-number {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #ff1744;
+  color: white;
+  border-radius: 50%;
+  min-width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

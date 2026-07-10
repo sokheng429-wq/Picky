@@ -1,0 +1,133 @@
+```css
+.favorites-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #fff7fa,
+    #ffeef5,
+    #fff
+  );
+}
+
+.favorites-header {
+  padding-top: 20px;
+}
+
+.favorites-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ff4d8d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.heart-icon {
+  color: #ff3366;
+}
+
+.favorites-subtitle {
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.favorite-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.35s ease;
+}
+
+.favorite-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(255, 77, 141, 0.2);
+}
+
+.favorite-image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.favorite-image {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  transition: 0.4s ease;
+}
+
+.favorite-card:hover .favorite-image {
+  transform: scale(1.05);
+}
+
+.remove-favorite-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #ff3366;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-content {
+  padding: 20px;
+}
+
+.favorite-content h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.favorite-price {
+  color: #ff4d8d;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.add-cart-btn {
+  width: 100%;
+  border: none;
+  border-radius: 50px;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(
+    135deg,
+    #ff4d8d,
+    #ff85a2
+  );
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.add-cart-btn:hover {
+  transform: translateY(-2px);
+}
+
+.empty-favorites {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.empty-heart {
+  font-size: 5rem;
+  color: #ff4d8d;
+  margin-bottom: 20px;
+}
+
+.empty-favorites h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.empty-favorites p {
+  color: #777;
+}
+```

@@ -1,0 +1,41 @@
+.filter-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.filter-section h4{
+    width:100%;
+    text-align:center;
+    color:#ff1493;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.filter-section button{
+    border:none;
+    padding:10px 22px;
+    border-radius:50px;
+    background:white;
+    color:#ff1493;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 5px 15px rgba(255,20,147,.15);
+}
+
+.filter-section button:hover{
+    transform:translateY(-3px);
+}
+
+.filter-section button.active{
+    background:linear-gradient(
+        135deg,
+        #ff69b4,
+        #ff1493
+    );
+    color:white;
+}
